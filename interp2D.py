@@ -114,7 +114,7 @@ def doHorInterpolationSSHRegularGrid(myvar,grdROMS,grdMODEL,mydata,useFilter):
 
     if (grdMODEL.useESMF):
 
-            grdMODEL.fieldSrc[:,:]=np.flipud(np.rot90(np.squeeze(mydata[:,:])))
+            grdMODEL.fieldSrc.data[:,:]=np.flipud(np.rot90(np.squeeze(mydata[:,:])))
 
             if myvar in ["uice"]:
                 field = grdMODEL.regridSrc2Dst_u(grdMODEL.fieldSrc, grdMODEL.fieldDst_u)
