@@ -991,7 +991,7 @@ def convertMODEL2ROMS(confM2R):
                         IOwrite.writeClimFile(confM2R.grdROMS, time, confM2R.climname, myvar,confM2R. isclimatology, confM2R.writeice,
                                               confM2R.indatatype, confM2R.myformat, STdata)
                         if time == confM2R.grdROMS.initTime and confM2R.grdROMS.write_init is True:
-                            IOinitial.createInitFile(confM2R.grdROMS, time, confM2R.initName, myvar, confM2R.writeIce,
+                            IOinitial.createInitFile(confM2R.grdROMS, time, confM2R.initname, myvar, confM2R.writeice,
                                                      confM2R.indatatype, confM2R.myformat, STdata)
 
                     if myvar in ['ssh', 'ageice', 'aice', 'hice', 'snow_thick']:
@@ -1008,7 +1008,7 @@ def convertMODEL2ROMS(confM2R):
                                               confM2R.writeice, confM2R.indatatype,
                                               confM2R.myformat, SSHdata)
                         if time == confM2R.grdROMS.initTime:
-                            IOinitial.createInitFile(confM2R.grdROMS, time, confM2R.initName, myvar, confM2R.writeIce,
+                            IOinitial.createInitFile(confM2R.grdROMS, time, confM2R.initname, myvar, confM2R.writeice,
                                                      confM2R.indatatype, confM2R.myformat,  SSHdata)
 
                     # The following are special routines used to calculate the u and v velocity
@@ -1040,7 +1040,7 @@ def convertMODEL2ROMS(confM2R):
                                                          confM2R.writeice, confM2R.indatatype,
                                                          confM2R.myformat,  SSHdata)
                             if myvar == 'vice':
-                                IOinitial.createInitFile(confM2R.grdROMS, time, confM2R.initName, 'vice',
+                                IOinitial.createInitFile(confM2R.grdROMS, time, confM2R.initname, 'vice',
                                                          confM2R.writeice, confM2R.indatatype,
                                                          confM2R.myformat, SSHdata)
 

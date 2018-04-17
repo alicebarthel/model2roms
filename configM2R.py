@@ -148,7 +148,7 @@ class Model2romsConfig(object):
         # each time run
         self.decimategridfile = False
         # Write ice values to file (for Arctic regions)
-        self.writeIce = True
+        self.writeice = True
         # Use ESMF for the interpolation. This requires that you have ESMF and ESMPy installed (import ESMF)
         self.useesmf = True
         # Apply filter to smooth the 2D fields after interpolation (time consuming but enhances results)
@@ -291,7 +291,7 @@ class Model2romsConfig(object):
             #if self.createoceanforcing:
             #    model2roms.convertMODEL2ROMS()
 
-            #    clim2bry.writeBry(grdROMS, start_year, bryName, climname, writeIce, indatatype, myformat)
+            #    clim2bry.writeBry(grdROMS, start_year, bryName, climname, writeice, indatatype, myformat)
 
             #if self.createAtmosForcing:
             #    atmosForcing.createAtmosFileUV(grdROMS, modelpath, atmospath, startdate, enddate, useESMF,
