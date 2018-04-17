@@ -50,7 +50,7 @@ def doHorInterpolationRegularGrid(myvar, grdROMS, grdMODEL, mydata, show_progres
 
         if (grdMODEL.useESMF):
 
-            grdMODEL.fieldSrc[:,:]=np.flipud(np.rot90(np.squeeze(mydata[k,:,:])))
+            grdMODEL.fieldSrc.data[:,:]=np.flipud(np.rot90(np.squeeze(mydata[k,:,:])))
             # Get the actual regridded array
             field = grdMODEL.regridSrc2Dst_rho(grdMODEL.fieldSrc, grdMODEL.fieldDst_rho)
 

@@ -988,7 +988,7 @@ def convertMODEL2ROMS(confM2R):
 
                         STdata = np.where(abs(STdata) > 1000, confM2R.grdROMS.fill_value, STdata)
 
-                        IOwrite.writeClimFile(confM2R.grdROMS, time, cconfM2R.limName, myvar,confM2R. isclimatology, confM2R.writeice,
+                        IOwrite.writeClimFile(confM2R.grdROMS, time, confM2R.climname, myvar,confM2R. isclimatology, confM2R.writeice,
                                               confM2R.indatatype, confM2R.myformat, STdata)
                         if time == confM2R.grdROMS.initTime and confM2R.grdROMS.write_init is True:
                             IOinitial.createInitFile(confM2R.grdROMS, time, confM2R.initName, myvar, confM2R.writeIce,

@@ -252,7 +252,7 @@ class Model2romsConfig(object):
             self.climname, self.initname, self.bryname = self.defineoutputfilenames()
 
             if self.isclimatology is True:
-                self.climName = self.abbreviation + '_' + str(self.indatatype) + '_climatology.nc'
+                self.climname = self.abbreviation + '_' + str(self.indatatype) + '_climatology.nc'
 
             self.showinfo()
 
@@ -291,7 +291,7 @@ class Model2romsConfig(object):
             #if self.createoceanforcing:
             #    model2roms.convertMODEL2ROMS()
 
-            #    clim2bry.writeBry(grdROMS, start_year, bryName, climName, writeIce, indatatype, myformat)
+            #    clim2bry.writeBry(grdROMS, start_year, bryName, climname, writeIce, indatatype, myformat)
 
             #if self.createAtmosForcing:
             #    atmosForcing.createAtmosFileUV(grdROMS, modelpath, atmospath, startdate, enddate, useESMF,
