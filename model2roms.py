@@ -997,7 +997,7 @@ def convertMODEL2ROMS(confM2R):
                     if myvar in ['ssh', 'ageice', 'aice', 'hice', 'snow_thick']:
                         SSHdata = array1[0, :, :]
 
-                        SSHdata = np.where(grdROMS.mask_rho == 0, confM2R.grdROMS.fill_value, SSHdata)
+                        SSHdata = np.where(confM2R.grdROMS.mask_rho == 0, confM2R.grdROMS.fill_value, SSHdata)
                         SSHdata = np.where(abs(SSHdata) > 100, confM2R.grdROMS.fill_value, SSHdata)
                         SSHdata = np.where(abs(SSHdata) == 0, confM2R.grdROMS.fill_value, SSHdata)
 
@@ -1065,9 +1065,9 @@ def convertMODEL2ROMS(confM2R):
 
                         Udata = np.where(confM2R.grdROMS.mask_u == 0, confM2R.grdROMS.fill_value, Udata)
                         Udata = np.where(abs(Udata) > 1000, confM2R.grdROMS.fill_value, Udata)
-                        Vdata = np.where(gconfM2R.rdROMS.mask_v == 0, confM2R.grdROMS.fill_value, Vdata)
+                        Vdata = np.where(confM2R.grdROMS.mask_v == 0, confM2R.grdROMS.fill_value, Vdata)
                         Vdata = np.where(abs(Vdata) > 1000, confM2R.grdROMS.fill_value, Vdata)
-                        UBARdata = np.where(gconfM2R.rdROMS.mask_u == 0, confM2R.grdROMS.fill_value, UBARdata)
+                        UBARdata = np.where(confM2R.grdROMS.mask_u == 0, confM2R.grdROMS.fill_value, UBARdata)
                         UBARdata = np.where(abs(UBARdata) > 1000, confM2R.grdROMS.fill_value, UBARdata)
                         VBARdata = np.where(confM2R.grdROMS.mask_v == 0, confM2R.grdROMS.fill_value, VBARdata)
                         VBARdata = np.where(abs(VBARdata) > 1000, confM2R.grdROMS.fill_value, VBARdata)
